@@ -47,7 +47,9 @@ $ git checkout gh-pages
 <p>
   <ul>
     <li>
-      <a href="javascript: function(){ var exurl = (window.location + ''); m = exurl.match(/^http(s)?:\/\/accounts\.(qa[0-9]\.)?usertesting\.com\/PrivateTesterSignupNew.aspx\?job=(.*)/);if (m) { n = 'http://www.' + m[m.length -2] + 'usertesting.com/pp/' + m[m.length -1]; window.location = prompt('The old url has been changed to:', n) } else { alert('Sorry, but the current url is not an old private panel url.'); }}" title="">UT Convert Private Panel</a>
+      <a href="javascript:(function(){var exurl = (window.location + '');
+      m=exurl.match(/^http(s)?:\/\/accounts\.(qa[0-9]\.)?usertesting\.com\/PrivateTesterSignupNew.aspx\?job=(.*)/);if(m){n='http://www.'+m[m.length
+      -2]+'usertesting.com/pp/'+m[m.length-1];window.location=prompt('The old url has been changed to:', n)}else{alert('Sorry, but the current url is not an old private panel url.');};})();" title="">UT Convert Private Panel</a>
     </li>
   </ul>
 </p>
