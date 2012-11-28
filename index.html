@@ -33,10 +33,21 @@
 <p>
   <ul>
     <li>
-      <a href="javascript:(function(){var exurl = (window.location + '');
-      m=exurl.match(/^http(s)?:\/\/accounts\.(qa[0-9]\.)?usertesting\.com\/PrivateTesterSignupNew.aspx\?job=(.*)/);if(m){n='http://www.'+m[m.length
-      -2]+'usertesting.com/pp/'+m[m.length-1];window.location=prompt('The old url has been changed to:', n)}else{alert('Sorry, but the current url is not an old private panel url.');};})();">UT
-      Convert Private Panel</a> <- Drag (to use, click on the this bookmarklet while on an "old" private panel url. see <a href="http://screencast.com/t/7maIRn5jRC">Video Tutorial</a>)
+      <!-- 
+      (function() {
+        var exurl = (window.location.href);
+        m = exurl.match(/^http(s)?:\/\/accounts\.(qa[0-9]\.)?usertesting\.com\/PrivateTesterSignupNew.aspx\?job=(.*)/);
+        if (m) {
+          n = 'http://www.' + (m[m.length - 2] || '') + 'usertesting.com/pp/' + m[m.length - 1];
+          if (new_location = prompt('The old url has been changed to:', n)) {
+            window.location = new_location;                                  
+          }
+        } else {
+          alert('Sorry, but the current url is not an old private panel url.');
+        };
+      })();
+      -->
+      <a href="javascript:(function()%20{var%20exurl%20=%20(window.location.href);m%20=%20exurl.match(/^http(s)?:\/\/accounts\.(qa[0-9]\.)?usertesting\.com\/PrivateTesterSignupNew.aspx\?job=(.*)/);if%20(m)%20{n%20=%20%27http://www.%27%20+%20(m[m.length%20-%202]%20||%20%27%27)%20+%20%27usertesting.com/pp/%27%20+%20m[m.length%20-%201];if%20(new_location%20=%20prompt(%27The%20old%20url%20has%20been%20changed%20to:%27,%20n))%20{window.location%20=%20new_location;}}%20else%20{alert(%27Sorry,%20but%20the%20current%20url%20is%20not%20an%20old%20private%20panel%20url.%27);};})();">UT Convert Private Panel</a> <- Drag (to use, click on the this bookmarklet while on an "old" private panel url. see <a href="http://screencast.com/t/7maIRn5jRC">Video Tutorial</a>)
     </li>
   </ul>
 </p>
