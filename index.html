@@ -49,6 +49,20 @@
       -->
       <a href="javascript:(function()%20{var%20exurl%20=%20(window.location.href);m%20=%20exurl.match(/^http(s)?:\/\/accounts\.(qa[0-9]\.)?usertesting\.com\/PrivateTesterSignupNew.aspx\?job=(.*)/);if%20(m)%20{n%20=%20%27http://www.%27%20+%20(m[m.length%20-%202]%20||%20%27%27)%20+%20%27usertesting.com/pp/%27%20+%20m[m.length%20-%201];if%20(new_location%20=%20prompt(%27The%20old%20url%20has%20been%20changed%20to:%27,%20n))%20{window.location%20=%20new_location;}}%20else%20{alert(%27Sorry,%20but%20the%20current%20url%20is%20not%20an%20old%20private%20panel%20url.%27);};})();">UT Convert Private Panel</a> <- Drag (to use, click on the this bookmarklet while on an "old" private panel url. see <a href="http://screencast.com/t/7maIRn5jRC">Video Tutorial</a>)
     </li>
+    <li>
+      <!-- 
+      (function() {
+              email=prompt("Enter the email of the user you wish to login as:");
+              qaenv=prompt("Enter the qa environment like 'qa3'; blank is production:");
+              if(email.length){
+                      var domain='www.'+(qaenv.length?qaenv+'.':'')+'usertesting.com';
+                      var win=window.open("https://"+domain+"/admin/utilities/assume_identity?email="+email, '_blank');
+                      win.focus();
+              }
+      })();
+      -->
+      <a href="javascript:(function()%20%7Bemail%3Dprompt(%22Enter%20the%20email%20of%20the%20user%20you%20wish%20to%20login%20as%3A%22)%3Bqaenv%3Dprompt(%22Enter%20the%20qa%20environment%20like%20%27qa3%27%3B%20blank%20is%20production%3A%22)%3Bif(email.length)%7Bvar%20domain%3D%27www.%27%2B(qaenv.length%3Fqaenv%2B%27.%27%3A%27%27)%2B%27usertesting.com%27%3Bvar%20win%3Dwindow.open(%22https%3A%2F%2F%22%2Bdomain%2B%22%2Fadmin%2Futilities%2Fassume_identity%3Femail%3D%22%2Bemail%2C%20%27_blank%27)%3Bwin.focus()%3B%7D%7D)()%3B">UT Assume Identity</a> <- Drag (to use, click on the this bookmarklet and use from any page. see <a href="http://screencast.com/t/7maIRn5jRC">Video Tutorial</a>)
+    </li>
   </ul>
 </p>
 
